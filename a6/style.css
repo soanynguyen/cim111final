@@ -320,27 +320,27 @@
     }
     
     .tps-section:nth-child(1n+1) .tps-wrapper {
-      background: url(california.jpg) center center;
+      background: url(images/california.jpg) center center;
       background-size: cover;
     }
     
     .tps-section:nth-child(2n+1) .tps-wrapper {
-      background:  url(florida.jpg) center center;
+      background:  url(images/florida.jpg) center center;
       background-size: cover;
     }
     
     .tps-section:nth-child(3n+1) .tps-wrapper {
-      background:  url(italy.jpg) center center;
+      background:  url(images/italy.jpg) center center;
       background-size: cover;
     }
     
     .tps-section:nth-child(4n+1) .tps-wrapper {
-      background:  url(hongkong.jpg) center center;
+      background:  url(images/hongkong.jpg) center center;
       background-size: cover;
     }
 
       .tps-section:nth-child(5n+1) .tps-wrapper {
-      background:  url(vietnam.jpg) center center;
+      background:  url(images/vietnam.jpg) center center;
       background-size: cover;
     }
     

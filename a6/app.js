@@ -21,8 +21,28 @@
     opacity: true,
     scale: true,
     outAnimation: true
-	};
-	
+  };
+  
+  $(document).ready(function(){
+    $(".main").tiltedpage_scroll({
+      angle: 20
+    });
+  });
+  
+
+  (function(){
+    var bsa = document.createElement('script');
+       bsa.type = 'text/javascript';
+       bsa.async = true;
+       bsa.src = '//s3.buysellads.com/ac/bsa.js';
+    (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+  })();
+
+var _gaq=[['_setAccount','UA-11278966-1'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+
 
   $.fn.tiltedpage_scroll = function(options){
     var settings = $.extend({}, defaults, options),
@@ -77,7 +97,7 @@
             if(opacity < 0) opacity = 0;
             if (deg < 0) deg = 0;
           } else {
-            opacity = ((el2.parent().offset().top + ($(window).height() * 1.2) - st)) / ($(window).height());	
+            opacity = ((el2.parent().offset().top + ($(window).height() * 1.2) - st)) / ($(window).height()); 
             opacity = Math.pow(opacity,25);
             deg = (el2.parent().offset().top - st) / $(window).height() * (settings.angle * 3);
             scale = ((st + $(window).height() - el2.parent().offset().top ) / ($(window).height() )) ;
@@ -85,16 +105,16 @@
           
           
         } else {
-        	if(index != 0) {
-          	var opacity = ((st + $(window).height() - el2.parent().offset().top + (el2.height()/2))/ $(window).height());
+          if(index != 0) {
+            var opacity = ((st + $(window).height() - el2.parent().offset().top + (el2.height()/2))/ $(window).height());
 
-        		if(opacity > 1) { opacity = 1; }
-				
-        	} else {
-        		opacity = 1;
+            if(opacity > 1) { opacity = 1; }
+        
+          } else {
+            opacity = 1;
             deg = 0;
             scale = 1;
-        	}
+          }
         }
         
         if (settings.scale == false) scale = 1;
