@@ -1,27 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="author" content="Soany">
-  <meta name="keywords" content="resume">
-  <meta name="description" content="job">
-	<meta charset="utf-8">
-	<title>Soany's Travels'</title>
-	<meta name="title" content="jQuery One Page Scroll by Pete R. | The Pete Design" />
-	<meta name="description" content="Create a beautiful 3D tilted effect on scroll with jQuery Tilted Page Scroll plugin by Pete Rojwongsuriya" />
-	<link rel="image_src" href="/images/tiltedpage_scroll_image.png" />
+.tps-section {
+  width: 100%;
+  height: 500px;
+  -webkit-perspective: 10em;
+  -moz-perspective: 10em;
+  -ms-perspective: 10em;
+  -o-perspective: 10em;
+  perspective: 10em;
+  -webkit-perspective-origin: center bottom;
+  -moz-perspective-origin: center bottom;
+  -ms-perspective-origin: center bottom;
+  -o-perspective-origin: center bottom;
+  perspective-origin: center bottom;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
 
-	<meta content="http://www.thepetedesign.com/demos/tiltedpage_scroll_demo.html" property="og:url" />
-	<meta content="http://www.thepetedesign.com/images/tiltedpage_scroll_image.png" property="og:image" />
-	<link rel="shortcut icon" id="favicon" href="favicon.png"> 
-	<meta name="author" content="Pete R.">
-	<link rel="canonical" href="http://www.thepetedesign.com/demos/tiltedpage_scroll_demo.html" />
-  <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400italic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script type="text/javascript" src="jquery.tiltedpage-scroll.js"></script>
-  <link href='tiltedpage-scroll.css' rel='stylesheet' type='text/css'>
-  <style>
+
+.tps-wrapper {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
     html {
       height: 100%;
     }
@@ -36,10 +44,10 @@
     }
     
     .wrapper {
-    	height: auto !important;
-    	height: 100%;
-    	margin: 0 auto; 
-    	overflow: hidden;
+      height: auto !important;
+      height: 100%;
+      margin: 0 auto; 
+      overflow: hidden;
     }
     
     a {
@@ -340,102 +348,3 @@
       overflow: hidden;
       clear: both;
     }
-	</style>
-	<script>
-	  $(document).ready(function(){
-      $(".main").tiltedpage_scroll({
-        angle: 20
-      });
-		});
-		
-	  </script>
-    <link rel="stylesheet" href="../css/demo.css">
-    <script src="../js/demo.js"></script>
-  </head>
- 
-
-  <body>
-
-    <header>
-<h1 class="title">My Favorite Travels</h1>
-
-<p>Traveling the world exposes you to new cultures and I want to show what I've experienced through 5 different places around the globe. </p>
-
-</header>
-
-<article>
-  <hr>
-<!-- unordered list -->
-<h3>Top 5 Locations</h3>
-<ul>
-  <li><a href="california/index.html">California</a></li>
-  <li><a href="florida/index.html">Florida</a></li>
-    <li><a href="italy/index.html">Italy</a></li>
-    <li><a href="hongkong/index.html">Hong Kong</a></li>
-    <li><a href="vietnam/index.html">Vietnam</a></li>
-
-</ul>
-</article>
-
-      <script type="text/javascript">
-      (function(){
-        var bsa = document.createElement('script');
-           bsa.type = 'text/javascript';
-           bsa.async = true;
-           bsa.src = '//s3.buysellads.com/ac/bsa.js';
-        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
-      })();
-      </script>
-   
-  	  <div class="main">
-	    <div class="header">
-        <div class="btns">
-  	    </div>
-  	  </div>
-  	  <section class="page1">
-        <div class="page_container">
-          <h1><a href="california.jpg" target="_blank">Los Angeles, CA<br><small>2018</small></a></h1>
-        </div>
-      </section>
-  	  <section class="page2">
-        <div class="page_container">
-          <h1><a href="florida.jpg" target="_blank">Miami, FL<br><small>2018</small></a></h1>
-        </div>
-      </section>
-  	  <section class="page3">
-        <div class="page_container">
-          <h1><a href="italy.jpg" target="_blank">Italy<br><small>2016</small></a></h1>
-        </div>
-      </section>
-  	  <section class="page4">
-        <div class="page_container">
-          <h1><a href="hongkong.jpg">Hong Kong<br><small>2017</small></a></h1>
-        </div>
-      </section>
-  	  <section class="page5">
-        <div class="page_container">
-          <h1><a href="vietnam.jpg" target="_blank">Saigon, Vietnam<br><small>2017</small></a></h1>
-        </div>
-    </div>
-    
-  </div>
-  
-  <script>
-
-  	var _gaq=[['_setAccount','UA-11278966-1'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
-  	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-  	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  	s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
-
-    <h1>Address Tag</h1>
-  <address>
-  Written by <a href="mailto:sxn292@miami.edu">Spider-Man</a>.<br>
-  Visit us at: http://www.spiderman.com <br/>
-  20 Ingram Street<br>
- Queens, New York<br>
-  USA
-  </address>
-
-</body>
-</html>
